@@ -19,6 +19,10 @@ try:
 except Exception as e:
     raise RuntimeError(f"Failed to load model from {model_path}: {e}")
 
+@app.get("/ping")
+def ping():
+    return {"message": "API is live!"}
+
 @app.post("/")
 async def scoring_endpoint(item: ScoringItem): 
     input_df = pd.DataFrame([item.dict()])
