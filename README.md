@@ -56,6 +56,9 @@ This is a simple FastAPI application that loads a trained machine learning model
     "Salary": 2
     }'`
 
+## Demo
+![FastML API](FastML.gif)
+
 ## Common Issues
 
 - **ModuleNotFoundError**: Ensure your `virtualenv` is activated before running anything.
