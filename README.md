@@ -1,6 +1,6 @@
 # FastAPI ML Prediction API
 
-This is a simple FastAPI application that loads a trained machine learning model (pickled with `pickle`) and provides a prediction endpoint via HTTP.
+A lightweight FastAPI application for serving machine learning predictions via HTTP.
 
 ## Setup
 
@@ -8,11 +8,12 @@ This is a simple FastAPI application that loads a trained machine learning model
     - `cd FastAPI-ML`
 
 - ### Project Structure
-    - FastAPI-ML/
-    - ├── fastml/           Virtual environment (excluded from version control)
-    - ├── mlapi.py          Main FastAPI application 
-    - ├── rfmodel.pkl       Trained ML model 
-    - └── README.md         Documentation
+
+- FastAPI-ML/
+- ├── fastml/          # Virtual environment (excluded from version control)
+- ├── mlapi.py         # Main FastAPI application 
+- ├── rfmodel.pkl      # Trained ML model 
+- └── README.md        # Documentation
 
 - ### Create and activate a virtual environment
     - `python3 -m venv fastml`
@@ -21,20 +22,20 @@ This is a simple FastAPI application that loads a trained machine learning model
 - ### Install dependencies
     - `pip install numpy==1.23.5 scikit-learn==1.1.3 pandas fastapi uvicorn`
 
-- ### Dependencies section
-    - Let users install all dependencies in one go: `pip freeze > requirements.txt`
-
 - ### Installing from requirements.txt
     - `pip install -r requirements.txt`
+
+- ### Dependencies section
+    - Let users install all dependencies in one go: `pip freeze > requirements.txt`
 
 ## Run the API
 - `python -m uvicorn mlapi:app --reload`
 
-    - **Ping GET**: `http://127.0.0.1:8000/ping` - 
+    - **Ping GET**: `http://127.0.0.1:8000/ping` - Checks if the API is live.
         - Response : `{
                 "message": "API is live!"
             }`
-    - **POST /**: `http://127.0.0.1:8000`
+    - **POST /**: `http://127.0.0.1:8000` - Submit data for prediction.
         - Request Body (JSON):
             - `{
                     "YearsAtCompany": 5,
@@ -50,14 +51,14 @@ This is a simple FastAPI application that loads a trained machine learning model
 
 - Example request (using curl or Postman):
     - `curl -X POST "http://127.0.0.1:8000/" -H "Content-Type: application/json" -d '{
-    "YearsAtCompany": 3,
-    "EmployeeSatisfaction": 4.2,
-    "Position": "Manager",
-    "Salary": 2
+        "YearsAtCompany": 3,
+        "EmployeeSatisfaction": 4.2,
+        "Position": "Manager",
+        "Salary": 2
     }'`
 
 ## Demo
-![FastML API](FastML.gif)
+![Demo of FastAPI ML prediction](FastML.gif)
 
 ## Common Issues
 
