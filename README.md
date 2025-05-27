@@ -77,8 +77,8 @@ A lightweight FastAPI application for serving machine learning predictions via H
 - Make sure `rfmodel.pkl` was trained using the same scikit-learn and numpy versions.
 - If you face issues like numpy dtype size changed, recreate the virtualenv with matching versions.
 
-## 🧑‍💻 Developer Setup
+## Developer Setup
 - Clone the repository: `git clone https://github.com/amitesh786/FastAPI-ML`
 
-## 👨‍💻 Author Amitesh Singh – [GitHub](https://github.com/amitesh786)
-- Feel free to contribute or suggest improvements! 🙌
+## Author Amitesh Singh – [GitHub](https://github.com/amitesh786)
+- Feel free to contribute or suggest improvements!
