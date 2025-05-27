@@ -5,8 +5,7 @@ import pandas as pd
 import os
 
 app = FastAPI()
-
-class ScoringItem(BaseModel): 
+class ScoringItem(BaseModel):
     YearsAtCompany: float
     EmployeeSatisfaction: float
     Position: str
