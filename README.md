@@ -32,33 +32,35 @@ A lightweight FastAPI application for serving machine learning predictions via H
 - `python -m uvicorn mlapi:app --reload`
 
     - **Ping GET**: `http://127.0.0.1:8000/ping` - Checks if the API is live.
-        - Response : `{
+        - Response : 
+            `{
                 "message": "API is live!"
             }`
     - **POST /**: `http://127.0.0.1:8000` - Submit data for prediction.
         - Request Body (JSON):
-            - `{
+            -   `{
                     "YearsAtCompany": 5,
                     "EmployeeSatisfaction": 1,
                     "Position": "Manager",
                     "Salary": 2.0
                 }`
-        - Response : `{
+        - Response : 
+            `{
                 "prediction": 1
             }`
 
 ## Test the API
 
 - Example request (using curl or Postman):
-    - `curl -X POST "http://127.0.0.1:8000/" -H "Content-Type: application/json" -d '{
-        "YearsAtCompany": 3,
-        "EmployeeSatisfaction": 4.2,
-        "Position": "Manager",
-        "Salary": 2
-    }'`
+    -   `curl -X POST "http://127.0.0.1:8000/" -H "Content-Type: application/json" -d '{
+            "YearsAtCompany": 3,
+            "EmployeeSatisfaction": 4.2,
+            "Position": "Manager",
+            "Salary": 2
+        }'`
 
 ## Demo
-![Demo of FastAPI ML prediction](FastML.gif)
+![Demo FastAPI ML](FastML.gif)
 
 ## Common Issues
 
